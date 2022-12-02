@@ -1,0 +1,111 @@
+:root {
+  --darkCyan: hsl(158, 36%, 37%);
+  --cream: hsl(30, 38%, 92%);
+  --veryDarkBlue: hsl(212, 21%, 14%);
+  --darkGrayishBlue: hsl(228, 12%, 48%);
+  --white: hsl(0, 0%, 100%);
+  --fontParagraph: 14px;
+}
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  max-width: 1440px;
+  background-color: var(--cream);
+}
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  min-width: 100vw;
+}
+.mainWrapper {
+  background-color: var(--white);
+  display: flex;
+  max-height: 60vh;
+  max-width: 45vw;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.mobile-image {
+  display: none;
+}
+.desktop-image,
+.mobile-image {
+  max-width: 22vw;
+  height: auto;
+  object-fit: fill;
+}
+.productDetails {
+  max-width: 25vw;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+.productDetails > * {
+  padding: 9px 0;
+}
+.productDetails h3 {
+  text-transform: uppercase;
+  color: var(--darkGrayishBlue);
+}
+.productDetails h1 {
+  color: var(--veryDarkBlue);
+}
+.productDetails p {
+  color: var(--darkGrayishBlue);
+  font-size: var(--fontParagraph);
+  line-height: 1.5rem;
+}
+/* price box */
+.price {
+  display: flex;
+  gap: 1rem;
+}
+.currentPrice {
+  color: var(--darkCyan);
+  font-size: 30px;
+  font-weight: bolder;
+}
+.strikeThrough {
+  text-decoration: line-through;
+  align-self: center;
+  color: var(--darkGrayishBlue);
+}
+
+.productDetails > a > button {
+  padding: 0.75rem 1rem;
+  background-color: var(--darkCyan);
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  color: var(--white);
+}
+.productDetails > a > button:hover {
+  background-color: rgb(16, 67, 67);
+  transition: all 0.7s;
+}
+@media only screen and (max-width: 780px) {
+  .mainWrapper {
+    max-height: 90vh;
+    max-width: 90vw;
+    flex-direction: column;
+  }
+  .desktop-image {
+    display: none;
+  }
+  .mobile-image {
+    display: inline;
+    max-width: 100vw;
+    max-height: 40vh;
+  }
+  .productDetails {
+    max-width: 100vw;
+    max-height: 60vh;
+  }
+  .productDetails > * {
+    padding: 5px 0;
+  }
+}
