@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&family=Montserrat:ital,wght@0,700;1,400&display=swap");
 :root {
   --darkCyan: hsl(158, 36%, 37%);
   --cream: hsl(30, 38%, 92%);
@@ -9,6 +10,7 @@
 * {
   padding: 0;
   margin: 0;
+  font-family: "Montserrat", "Times New Roman";
 }
 body {
   max-width: 1440px;
@@ -24,35 +26,41 @@ body {
 .mainWrapper {
   background-color: var(--white);
   display: flex;
-  max-height: 60vh;
-  max-width: 45vw;
+  max-height: 75vh;
+  max-width: 50vw;
   border-radius: 10px;
   overflow: hidden;
+  align-items: center;
 }
 .mobile-image {
   display: none;
 }
 .desktop-image,
 .mobile-image {
-  max-width: 22vw;
+  max-width: 25vw;
   height: auto;
   object-fit: fill;
 }
 .productDetails {
   max-width: 25vw;
-  padding: 1rem;
+  padding: 1.5rem 1rem;
   display: flex;
   flex-direction: column;
+  /* justify-content: space-around; */
 }
 .productDetails > * {
-  padding: 9px 0;
+  padding: 0.5rem;
 }
 .productDetails h3 {
   text-transform: uppercase;
+  font-size: 14px;
   color: var(--darkGrayishBlue);
+  /* font-weight: 400; */
+  letter-spacing: 0.25rem;
 }
 .productDetails h1 {
   color: var(--veryDarkBlue);
+  font-size: 700;
 }
 .productDetails p {
   color: var(--darkGrayishBlue);
